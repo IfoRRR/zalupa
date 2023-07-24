@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+	static void Main(string[] args)
+	{
+		Dictionary<string, string> words = new Dictionary<string, string>();
+		words.Add("apple", "яблоко");
+		words.Add("banana", "банан");
+		words.Add("car", "машина");
+		words.Add("dog", "собака");
+
+		Console.WriteLine("Введите слово:");
+
+		string word = Console.ReadLine();
+
+		if (words.ContainsKey(word))
+		{
+			string translation = words[word];
+			Console.WriteLine($"Значение слова '{word}': {translation}");
+		}
+		else
+		{
+			Console.WriteLine("Слово не найдено.");
+		}
+	}
+}
+
