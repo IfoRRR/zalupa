@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+	static void Main(string[] args)
+	{
+		int number = ReadNumber();
+
+		Console.WriteLine($"Вы ввели число: {number}");
+	}
+
+	static int ReadNumber()
+	{
+		int number;
+		bool isValidInput = false;
+
+		do
+		{
+			Console.WriteLine("Введите число:");
+			string input = Console.ReadLine();
+
+			isValidInput = int.TryParse(input, out number);
+
+		} while (!isValidInput);
+
+		return number;
+	}
+}
